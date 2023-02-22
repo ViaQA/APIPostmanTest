@@ -10,7 +10,7 @@
 			"name": "Create independence booking request and then auto decline it",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest1",
 					"event": [
 						{
 							"listen": "test",
@@ -24,7 +24,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking hourly\");"
+									"postman.setNextRequest(\"request booking hourly1\");"
 								],
 								"type": "text/javascript"
 							}
@@ -146,7 +146,7 @@
 					]
 				},
 				{
-					"name": "request booking hourly",
+					"name": "request booking hourly1",
 					"event": [
 						{
 							"listen": "test",
@@ -161,7 +161,7 @@
 									"    pm.environment.set(\"booking_id\", jsonData.booking.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-execute-all-custom-query\");"
+									"postman.setNextRequest(\"update-execute-all-custom-query1\");"
 								],
 								"type": "text/javascript"
 							}
@@ -187,7 +187,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"addressLine1\": \"123 State St\",\n  \"addressLine2\": \"test\",\n  \"cardNumber\": \"4242424242424242\",\n  \"cardholderName\": \"dasha\",\n  \"category\": \"\",\n  \"city\": \"Schenectady\",\n  \"country\": \"USA\",\n  \"cvv\": \"123\",\n  \"dateKey\": \"1100AM-1200AM; 01/17/2023\",\n  \"date_end\": \"\",\n  \"date_start\": \"2023/01/22\",\n  \"expiryDate\": \"11/23\",\n  \"hours_end\": \"0000\",\n  \"hours_start\": \"1100\",\n  \"message\": \"123\",\n  \"number_months\": \"\",\n  \"paymentMethod\": \"credit\",\n  \"placeId\": 13528,\n  \"policy\": true,\n  \"postcode\": \"12345\",\n  \"stateLegal\": \"AK\",\n  \"type\": \"hourly\"\n}",
+							"raw": "{\n  \"addressLine1\": \"123 State St\",\n  \"addressLine2\": \"test\",\n  \"cardNumber\": \"4242424242424242\",\n  \"cardholderName\": \"dasha\",\n  \"category\": \"\",\n  \"city\": \"Schenectady\",\n  \"country\": \"USA\",\n  \"cvv\": \"123\",\n  \"dateKey\": \"1100AM-1200AM; 01/17/2023\",\n  \"date_end\": \"\",\n  \"date_start\": \"2023/02/22\",\n  \"expiryDate\": \"11/23\",\n  \"hours_end\": \"0000\",\n  \"hours_start\": \"1100\",\n  \"message\": \"123\",\n  \"number_months\": \"\",\n  \"paymentMethod\": \"credit\",\n  \"placeId\": 13528,\n  \"policy\": true,\n  \"postcode\": \"12345\",\n  \"stateLegal\": \"AK\",\n  \"type\": \"hourly\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,7 +251,7 @@
 					]
 				},
 				{
-					"name": "update-execute-all-custom-query",
+					"name": "update-execute-all-custom-query1",
 					"event": [
 						{
 							"listen": "test",
@@ -261,7 +261,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications\");"
+									"postman.setNextRequest(\"cron-notifications1\");"
 								],
 								"type": "text/javascript"
 							}
@@ -353,7 +353,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications",
+					"name": "cron-notifications1",
 					"event": [
 						{
 							"listen": "test",
@@ -363,7 +363,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)1\");"
 								],
 								"type": "text/javascript"
 							}
@@ -385,7 +385,7 @@
 					"response": []
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)1",
 					"event": [
 						{
 							"listen": "test",
@@ -402,7 +402,7 @@
 									"});",
 									"",
 									"//postman.setNextRequest(\"authorize as guest2\")",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -489,7 +489,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking daily\");"
+									"postman.setNextRequest(\"request booking daily2\");"
 								],
 								"type": "text/javascript"
 							}
@@ -612,7 +612,7 @@
 					]
 				},
 				{
-					"name": "request booking daily",
+					"name": "request booking daily2",
 					"event": [
 						{
 							"listen": "test",
@@ -627,7 +627,7 @@
 									"    pm.environment.set(\"booking_id\", jsonData.booking.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cancel request by ID\");"
+									"postman.setNextRequest(\"cancel request by ID2\");"
 								],
 								"type": "text/javascript"
 							}
@@ -653,7 +653,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"addressLine1\": \"123 State St\",\n  \"addressLine2\": \"test\",\n  \"cardNumber\": \"4242424242424242\",\n  \"cardholderName\": \"dasha\",\n  \"category\": \"\",\n  \"city\": \"Schenectady\",\n  \"country\": \"USA\",\n  \"cvv\": \"123\",\n  \"dateKey\": \"01/16/2023-01/17/2023\",\n  \"date_end\": \"2023/01/23\",\n  \"date_start\": \"2023/01/22\",\n  \"expiryDate\": \"11/23\",\n  \"hours_end\": \"\",\n  \"hours_start\": \"\",\n  \"message\": \"123\",\n  \"number_months\": \"\",\n  \"paymentMethod\": \"credit\",\n  \"placeId\": 13528,\n  \"policy\": true,\n  \"postcode\": \"12345\",\n  \"stateLegal\": \"AK\",\n  \"type\": \"daily\"\n}",
+							"raw": "{\n  \"addressLine1\": \"123 State St\",\n  \"addressLine2\": \"test\",\n  \"cardNumber\": \"4242424242424242\",\n  \"cardholderName\": \"dasha\",\n  \"category\": \"\",\n  \"city\": \"Schenectady\",\n  \"country\": \"USA\",\n  \"cvv\": \"123\",\n  \"dateKey\": \"1100AM-1200AM; 01/17/2023\",\n  \"date_end\": \"\",\n  \"date_start\": \"2023/02/22\",\n  \"expiryDate\": \"11/23\",\n  \"hours_end\": \"0000\",\n  \"hours_start\": \"1100\",\n  \"message\": \"123\",\n  \"number_months\": \"\",\n  \"paymentMethod\": \"credit\",\n  \"placeId\": 13528,\n  \"policy\": true,\n  \"postcode\": \"12345\",\n  \"stateLegal\": \"AK\",\n  \"type\": \"hourly\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -717,7 +717,7 @@
 					]
 				},
 				{
-					"name": "cancel request by ID",
+					"name": "cancel request by ID2",
 					"event": [
 						{
 							"listen": "test",
@@ -727,7 +727,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is canceled)\");"
+									"postman.setNextRequest(\"get user requests info (check is canceled)2\");"
 								],
 								"type": "text/javascript"
 							}
@@ -812,7 +812,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is canceled)",
+					"name": "get user requests info (check is canceled)2",
 					"event": [
 						{
 							"listen": "test",
@@ -829,7 +829,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -902,7 +902,7 @@
 			"name": "Create independence booking request and then cancel it after approve(host)",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest3",
 					"event": [
 						{
 							"listen": "test",
@@ -916,7 +916,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking monthly\");"
+									"postman.setNextRequest(\"request booking monthly3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1038,7 +1038,7 @@
 					]
 				},
 				{
-					"name": "request booking monthly",
+					"name": "request booking monthly3",
 					"event": [
 						{
 							"listen": "test",
@@ -1053,7 +1053,7 @@
 									"    pm.environment.set(\"booking_id\", jsonData.booking.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1143,7 +1143,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host3",
 					"event": [
 						{
 							"listen": "test",
@@ -1156,7 +1156,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1265,7 +1265,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID3",
 					"event": [
 						{
 							"listen": "test",
@@ -1275,7 +1275,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1360,7 +1360,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is approved)",
+					"name": "get user requests info (check is approved)3",
 					"event": [
 						{
 							"listen": "test",
@@ -1378,7 +1378,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1446,7 +1446,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query3",
 					"event": [
 						{
 							"listen": "test",
@@ -1466,7 +1466,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"decline request by ID\");"
+									"postman.setNextRequest(\"decline request by ID3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1558,7 +1558,7 @@
 					]
 				},
 				{
-					"name": "decline request by ID",
+					"name": "decline request by ID3",
 					"event": [
 						{
 							"listen": "test",
@@ -1568,7 +1568,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1653,7 +1653,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)3",
 					"event": [
 						{
 							"listen": "test",
@@ -1672,7 +1672,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 3\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1740,7 +1740,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 3",
 					"event": [
 						{
 							"listen": "test",
@@ -1847,7 +1847,7 @@
 			"name": "Create independence booking request and then cancel it after approve(tenant)",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest4",
 					"event": [
 						{
 							"listen": "test",
@@ -1861,7 +1861,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking hourly\");"
+									"postman.setNextRequest(\"request booking hourly4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1983,7 +1983,7 @@
 					]
 				},
 				{
-					"name": "request booking hourly",
+					"name": "request booking hourly4",
 					"event": [
 						{
 							"listen": "test",
@@ -1998,7 +1998,7 @@
 									"    pm.environment.set(\"booking_id\", jsonData.booking.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2088,7 +2088,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host4",
 					"event": [
 						{
 							"listen": "test",
@@ -2101,7 +2101,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2210,7 +2210,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID4",
 					"event": [
 						{
 							"listen": "test",
@@ -2220,7 +2220,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2305,7 +2305,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is approved)",
+					"name": "get user requests info (check is approved)4",
 					"event": [
 						{
 							"listen": "test",
@@ -2323,9 +2323,9 @@
 									"});",
 									"",
 									"if (pm.variables.get(\"role_id\") == 2){",
-									"    postman.setNextRequest(\"authorize as guest after approve\");",
+									"    postman.setNextRequest(\"authorize as guest after approve4\");",
 									"} else {",
-									"    postman.setNextRequest(\"decline request by ID\");",
+									"    postman.setNextRequest(\"decline request by ID4\");",
 									"}",
 									"",
 									""
@@ -2396,7 +2396,7 @@
 					]
 				},
 				{
-					"name": "authorize as guest after approve",
+					"name": "authorize as guest after approve4",
 					"event": [
 						{
 							"listen": "test",
@@ -2410,7 +2410,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2519,7 +2519,7 @@
 					]
 				},
 				{
-					"name": "decline request by ID",
+					"name": "decline request by ID4",
 					"event": [
 						{
 							"listen": "test",
@@ -2529,7 +2529,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)4\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2614,7 +2614,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)4",
 					"event": [
 						{
 							"listen": "test",
@@ -2630,7 +2630,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -2703,7 +2703,7 @@
 			"name": "Create independence booking request positive",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest5",
 					"event": [
 						{
 							"listen": "test",
@@ -2717,7 +2717,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking monthly\");"
+									"postman.setNextRequest(\"request booking monthly5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2839,7 +2839,7 @@
 					]
 				},
 				{
-					"name": "request booking monthly",
+					"name": "request booking monthly5",
 					"event": [
 						{
 							"listen": "test",
@@ -2854,7 +2854,7 @@
 									"    pm.environment.set(\"booking_id\", jsonData.booking.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -2944,7 +2944,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host5",
 					"event": [
 						{
 							"listen": "test",
@@ -2957,7 +2957,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3066,7 +3066,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID5",
 					"event": [
 						{
 							"listen": "test",
@@ -3076,7 +3076,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3161,7 +3161,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is approved)",
+					"name": "get user requests info (check is approved)5",
 					"event": [
 						{
 							"listen": "test",
@@ -3179,7 +3179,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-execute-send-money-to-host\");"
+									"postman.setNextRequest(\"update-execute-send-money-to-host5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3247,7 +3247,7 @@
 					]
 				},
 				{
-					"name": "update-execute-send-money-to-host",
+					"name": "update-execute-send-money-to-host5",
 					"event": [
 						{
 							"listen": "test",
@@ -3257,7 +3257,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications\");"
+									"postman.setNextRequest(\"cron-notifications5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3349,7 +3349,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications",
+					"name": "cron-notifications5",
 					"event": [
 						{
 							"listen": "test",
@@ -3359,7 +3359,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3381,7 +3381,7 @@
 					"response": []
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query5",
 					"event": [
 						{
 							"listen": "test",
@@ -3393,7 +3393,7 @@
 									"    pm.expect(jsonData.query[0].action).to.eql(\"MakeDelayedPayment\");",
 									"});",
 									"",
-									"postman.setNextRequest('get-booking-transaction-status');"
+									"postman.setNextRequest('get-booking-transaction-status5');"
 								],
 								"type": "text/javascript"
 							}
@@ -3485,7 +3485,7 @@
 					]
 				},
 				{
-					"name": "get-booking-transaction-status",
+					"name": "get-booking-transaction-status5",
 					"event": [
 						{
 							"listen": "test",
@@ -3501,7 +3501,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-delayed-payments\");"
+									"postman.setNextRequest(\"update-delayed-payments5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3593,7 +3593,7 @@
 					]
 				},
 				{
-					"name": "update-delayed-payments",
+					"name": "update-delayed-payments5",
 					"event": [
 						{
 							"listen": "test",
@@ -3603,7 +3603,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications 2\");"
+									"postman.setNextRequest(\"cron-notifications2 5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3695,7 +3695,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications 2",
+					"name": "cron-notifications2 5",
 					"event": [
 						{
 							"listen": "test",
@@ -3705,7 +3705,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3727,7 +3727,7 @@
 					"response": []
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 5",
 					"event": [
 						{
 							"listen": "test",
@@ -3739,7 +3739,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(0);",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-finish-date-for-booking\");"
+									"postman.setNextRequest(\"update-finish-date-for-booking5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3831,7 +3831,7 @@
 					]
 				},
 				{
-					"name": "update-finish-date-for-booking",
+					"name": "update-finish-date-for-booking5",
 					"event": [
 						{
 							"listen": "test",
@@ -3841,7 +3841,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"finish bookings\");"
+									"postman.setNextRequest(\"finish bookings5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3933,7 +3933,7 @@
 					]
 				},
 				{
-					"name": "finish bookings",
+					"name": "finish bookings5",
 					"event": [
 						{
 							"listen": "test",
@@ -3948,7 +3948,7 @@
 									"    pm.expect(pm.response.text()).to.include(`Booking ${bookingId} completed`);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is completed)\");"
+									"postman.setNextRequest(\"get user requests info (check is completed)5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -3970,7 +3970,7 @@
 					"response": []
 				},
 				{
-					"name": "get user requests info (check is completed)",
+					"name": "get user requests info (check is completed)5",
 					"event": [
 						{
 							"listen": "test",
@@ -3988,7 +3988,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 3\");"
+									"postman.setNextRequest(\"select-all-custom-query3 5\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4056,7 +4056,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 3",
+					"name": "select-all-custom-query3 5",
 					"event": [
 						{
 							"listen": "test",
@@ -4163,7 +4163,7 @@
 			"name": "Create passes subscription positive case",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest6",
 					"event": [
 						{
 							"listen": "test",
@@ -4177,7 +4177,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4303,7 +4303,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly",
+					"name": "request booking(coworking) monthly6",
 					"event": [
 						{
 							"listen": "test",
@@ -4320,7 +4320,7 @@
 									"    pm.environment.set(\"sub_id\", jsonData.subs[0].space.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4419,7 +4419,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host6",
 					"event": [
 						{
 							"listen": "test",
@@ -4432,7 +4432,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4541,7 +4541,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID6",
 					"event": [
 						{
 							"listen": "test",
@@ -4551,7 +4551,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4636,7 +4636,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query6",
 					"event": [
 						{
 							"listen": "test",
@@ -4648,7 +4648,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(2);",
 									"});",
 									"",
-									"postman.setNextRequest('update-execute-send-money-to-host');"
+									"postman.setNextRequest('update-execute-send-money-to-host6');"
 								],
 								"type": "text/javascript"
 							}
@@ -4740,7 +4740,7 @@
 					]
 				},
 				{
-					"name": "update-execute-send-money-to-host",
+					"name": "update-execute-send-money-to-host6",
 					"event": [
 						{
 							"listen": "test",
@@ -4750,7 +4750,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest('cron-notifications');"
+									"postman.setNextRequest('cron-notifications6');"
 								],
 								"type": "text/javascript"
 							}
@@ -4842,7 +4842,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications",
+					"name": "cron-notifications6",
 					"event": [
 						{
 							"listen": "test",
@@ -4852,7 +4852,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get-booking-transaction-status\");"
+									"postman.setNextRequest(\"get-booking-transaction-status6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4874,7 +4874,7 @@
 					"response": []
 				},
 				{
-					"name": "get-booking-transaction-status",
+					"name": "get-booking-transaction-status6",
 					"event": [
 						{
 							"listen": "test",
@@ -4886,7 +4886,7 @@
 									"    pm.expect(jsonData.transaction.length).to.eql(1);",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-subscription-date\");"
+									"postman.setNextRequest(\"update-subscription-date6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -4978,7 +4978,7 @@
 					]
 				},
 				{
-					"name": "update-subscription-date",
+					"name": "update-subscription-date6",
 					"event": [
 						{
 							"listen": "test",
@@ -4988,7 +4988,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications 2\");"
+									"postman.setNextRequest(\"cron-notifications2 6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5080,7 +5080,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications 2",
+					"name": "cron-notifications2 6",
 					"event": [
 						{
 							"listen": "test",
@@ -5090,7 +5090,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get-booking-transaction-status 2\");"
+									"postman.setNextRequest(\"get-booking-transaction-status2 6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5112,7 +5112,7 @@
 					"response": []
 				},
 				{
-					"name": "get-booking-transaction-status 2",
+					"name": "get-booking-transaction-status2 6",
 					"event": [
 						{
 							"listen": "test",
@@ -5124,7 +5124,7 @@
 									"    pm.expect(jsonData.transaction.length).to.eql(2);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5216,7 +5216,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 6",
 					"event": [
 						{
 							"listen": "test",
@@ -5228,7 +5228,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(1);",
 									"});",
 									"",
-									"postman.setNextRequest('update-finish-date-for-booking');"
+									"postman.setNextRequest('update-finish-date-for-booking6');"
 								],
 								"type": "text/javascript"
 							}
@@ -5320,7 +5320,7 @@
 					]
 				},
 				{
-					"name": "update-finish-date-for-booking",
+					"name": "update-finish-date-for-booking6",
 					"event": [
 						{
 							"listen": "test",
@@ -5330,7 +5330,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"finish bookings\");"
+									"postman.setNextRequest(\"finish bookings6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5422,7 +5422,7 @@
 					]
 				},
 				{
-					"name": "finish bookings",
+					"name": "finish bookings6",
 					"event": [
 						{
 							"listen": "test",
@@ -5437,7 +5437,7 @@
 									"    pm.expect(pm.response.text()).to.include(`Booking ${bookingId} <b>NOT completed</b>0 of 1`);",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-subscription-date recheck\");"
+									"postman.setNextRequest(\"update-subscription-date recheck6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5459,7 +5459,7 @@
 					"response": []
 				},
 				{
-					"name": "update-subscription-date recheck",
+					"name": "update-subscription-date recheck6",
 					"event": [
 						{
 							"listen": "test",
@@ -5469,7 +5469,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications recheck\");"
+									"postman.setNextRequest(\"cron-notifications recheck6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5561,7 +5561,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications recheck",
+					"name": "cron-notifications recheck6",
 					"event": [
 						{
 							"listen": "test",
@@ -5571,7 +5571,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get-booking-transaction-status recheck\");"
+									"postman.setNextRequest(\"get-booking-transaction-status recheck6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5593,7 +5593,7 @@
 					"response": []
 				},
 				{
-					"name": "get-booking-transaction-status recheck",
+					"name": "get-booking-transaction-status recheck6",
 					"event": [
 						{
 							"listen": "test",
@@ -5605,7 +5605,7 @@
 									"    pm.expect(jsonData.transaction.length).to.eql(3);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query recheck\");"
+									"postman.setNextRequest(\"select-all-custom-query recheck6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5697,7 +5697,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query recheck",
+					"name": "select-all-custom-query recheck6",
 					"event": [
 						{
 							"listen": "test",
@@ -5709,7 +5709,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(1);",
 									"});",
 									"",
-									"postman.setNextRequest('authorize as guest 2');"
+									"postman.setNextRequest('authorize as guest2 6');"
 								],
 								"type": "text/javascript"
 							}
@@ -5801,7 +5801,7 @@
 					]
 				},
 				{
-					"name": "authorize as guest 2",
+					"name": "authorize as guest2 6",
 					"event": [
 						{
 							"listen": "test",
@@ -5815,7 +5815,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cancel subscription\");"
+									"postman.setNextRequest(\"cancel subscription6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -5924,7 +5924,7 @@
 					]
 				},
 				{
-					"name": "cancel subscription",
+					"name": "cancel subscription6",
 					"event": [
 						{
 							"listen": "test",
@@ -5934,7 +5934,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 3\");",
+									"postman.setNextRequest(\"select-all-custom-query3 6\");",
 									""
 								],
 								"type": "text/javascript"
@@ -6026,7 +6026,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 3",
+					"name": "select-all-custom-query3 6",
 					"event": [
 						{
 							"listen": "test",
@@ -6038,7 +6038,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(0);",
 									"});",
 									"",
-									"postman.setNextRequest('finish bookings 2');"
+									"postman.setNextRequest('finish bookings2 6');"
 								],
 								"type": "text/javascript"
 							}
@@ -6130,7 +6130,7 @@
 					]
 				},
 				{
-					"name": "finish bookings 2",
+					"name": "finish bookings2 6",
 					"event": [
 						{
 							"listen": "test",
@@ -6145,7 +6145,7 @@
 									"    pm.expect(pm.response.text()).to.include(`Booking ${bookingId} completed. 1:Items: 1`);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user bookings info\");"
+									"postman.setNextRequest(\"get user bookings info6\");"
 								],
 								"type": "text/javascript"
 							}
@@ -6167,7 +6167,7 @@
 					"response": []
 				},
 				{
-					"name": "get user bookings info",
+					"name": "get user bookings info6",
 					"event": [
 						{
 							"listen": "test",
@@ -6268,7 +6268,7 @@
 			"name": "Decline subscription after approve but before start",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest7",
 					"event": [
 						{
 							"listen": "test",
@@ -6282,7 +6282,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly7\");"
 								],
 								"type": "text/javascript"
 							}
@@ -6404,7 +6404,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly",
+					"name": "request booking(coworking) monthly7",
 					"event": [
 						{
 							"listen": "test",
@@ -6420,7 +6420,7 @@
 									"    pm.environment.set(\"sub_id\", jsonData.subs[0].space.id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query7\");"
 								],
 								"type": "text/javascript"
 							}
@@ -6510,7 +6510,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query7",
 					"event": [
 						{
 							"listen": "test",
@@ -6522,7 +6522,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(5);",
 									"});",
 									"",
-									"postman.setNextRequest('authorize as host');"
+									"postman.setNextRequest('authorize as host7');"
 								],
 								"type": "text/javascript"
 							}
@@ -6614,7 +6614,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host7",
 					"event": [
 						{
 							"listen": "test",
@@ -6627,7 +6627,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID7\");"
 								],
 								"type": "text/javascript"
 							}
@@ -6736,7 +6736,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID7",
 					"event": [
 						{
 							"listen": "test",
@@ -6746,7 +6746,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 7\");"
 								],
 								"type": "text/javascript"
 							}
@@ -6831,7 +6831,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 7",
 					"event": [
 						{
 							"listen": "test",
@@ -6843,7 +6843,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(2);",
 									"});",
 									"",
-									"postman.setNextRequest('decline request by ID');"
+									"postman.setNextRequest('decline request by ID7');"
 								],
 								"type": "text/javascript"
 							}
@@ -6935,7 +6935,7 @@
 					]
 				},
 				{
-					"name": "decline request by ID",
+					"name": "decline request by ID7",
 					"event": [
 						{
 							"listen": "test",
@@ -6945,7 +6945,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 3\");"
+									"postman.setNextRequest(\"select-all-custom-query3 7\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7030,7 +7030,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 3",
+					"name": "select-all-custom-query3 7",
 					"event": [
 						{
 							"listen": "test",
@@ -7137,7 +7137,7 @@
 			"name": "Create hourly/daily/monthly booking request positive",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest8",
 					"event": [
 						{
 							"listen": "test",
@@ -7151,7 +7151,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7273,7 +7273,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly/hourly/daily",
+					"name": "request booking(coworking) monthly/hourly/daily8",
 					"event": [
 						{
 							"listen": "test",
@@ -7289,7 +7289,7 @@
 									"});",
 									"",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7379,7 +7379,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host8",
 					"event": [
 						{
 							"listen": "test",
@@ -7392,7 +7392,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7501,7 +7501,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID8",
 					"event": [
 						{
 							"listen": "test",
@@ -7511,7 +7511,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"update-execute-send-money-to-host\");"
+									"postman.setNextRequest(\"update-execute-send-money-to-host8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7596,7 +7596,7 @@
 					]
 				},
 				{
-					"name": "update-execute-send-money-to-host",
+					"name": "update-execute-send-money-to-host8",
 					"event": [
 						{
 							"listen": "test",
@@ -7606,7 +7606,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest('cron-notifications');"
+									"postman.setNextRequest('cron-notifications8');"
 								],
 								"type": "text/javascript"
 							}
@@ -7698,7 +7698,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications",
+					"name": "cron-notifications8",
 					"event": [
 						{
 							"listen": "test",
@@ -7708,7 +7708,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7730,7 +7730,7 @@
 					"response": []
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query8",
 					"event": [
 						{
 							"listen": "test",
@@ -7744,7 +7744,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest('update-delayed-payments');"
+									"postman.setNextRequest('update-delayed-payments8');"
 								],
 								"type": "text/javascript"
 							}
@@ -7836,7 +7836,7 @@
 					]
 				},
 				{
-					"name": "update-delayed-payments",
+					"name": "update-delayed-payments8",
 					"event": [
 						{
 							"listen": "test",
@@ -7846,7 +7846,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications 2\");"
+									"postman.setNextRequest(\"cron-notifications2 8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7938,7 +7938,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications 2",
+					"name": "cron-notifications2 8",
 					"event": [
 						{
 							"listen": "test",
@@ -7948,7 +7948,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -7970,7 +7970,7 @@
 					"response": []
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 8",
 					"event": [
 						{
 							"listen": "test",
@@ -7982,7 +7982,7 @@
 									"    pm.expect(jsonData.query.length).to.eql(0);",
 									"});",
 									"",
-									"postman.setNextRequest('update-finish-date-for-booking');"
+									"postman.setNextRequest('update-finish-date-for-booking8');"
 								],
 								"type": "text/javascript"
 							}
@@ -8074,7 +8074,7 @@
 					]
 				},
 				{
-					"name": "update-finish-date-for-booking",
+					"name": "update-finish-date-for-booking8",
 					"event": [
 						{
 							"listen": "test",
@@ -8084,7 +8084,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"finish bookings\");"
+									"postman.setNextRequest(\"finish bookings8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8176,7 +8176,7 @@
 					]
 				},
 				{
-					"name": "finish bookings",
+					"name": "finish bookings8",
 					"event": [
 						{
 							"listen": "test",
@@ -8191,7 +8191,7 @@
 									"    pm.expect(pm.response.text()).to.include(`Booking ${bookingId} completed`);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info\");"
+									"postman.setNextRequest(\"get user requests info8\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8213,7 +8213,7 @@
 					"response": []
 				},
 				{
-					"name": "get user requests info",
+					"name": "get user requests info8",
 					"event": [
 						{
 							"listen": "test",
@@ -8230,7 +8230,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest('select-all-custom-query 3');"
+									"postman.setNextRequest('select-all-custom-query3 8');"
 								],
 								"type": "text/javascript"
 							}
@@ -8298,7 +8298,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 3",
+					"name": "select-all-custom-query3 8",
 					"event": [
 						{
 							"listen": "test",
@@ -8405,7 +8405,7 @@
 			"name": "Create hourly/daily/monthly booking request and then auto decline it",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest9",
 					"event": [
 						{
 							"listen": "test",
@@ -8419,7 +8419,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily9\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8541,7 +8541,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly/hourly/daily",
+					"name": "request booking(coworking) monthly/hourly/daily9",
 					"event": [
 						{
 							"listen": "test",
@@ -8557,7 +8557,7 @@
 									"});",
 									"",
 									"",
-									"postman.setNextRequest(\"update-execute-all-custom-query\");"
+									"postman.setNextRequest(\"update-execute-all-custom-query9\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8647,7 +8647,7 @@
 					]
 				},
 				{
-					"name": "update-execute-all-custom-query",
+					"name": "update-execute-all-custom-query9",
 					"event": [
 						{
 							"listen": "test",
@@ -8657,7 +8657,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"cron-notifications\");"
+									"postman.setNextRequest(\"cron-notifications9\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8749,7 +8749,7 @@
 					]
 				},
 				{
-					"name": "cron-notifications",
+					"name": "cron-notifications9",
 					"event": [
 						{
 							"listen": "test",
@@ -8759,7 +8759,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)9\");"
 								],
 								"type": "text/javascript"
 							}
@@ -8781,7 +8781,7 @@
 					"response": []
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)9",
 					"event": [
 						{
 							"listen": "test",
@@ -8797,7 +8797,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -8870,7 +8870,7 @@
 			"name": "Create hourly/daily/monthly booking request and then cancel it (pending status)(tenant)",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest10",
 					"event": [
 						{
 							"listen": "test",
@@ -8884,7 +8884,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily10\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9006,7 +9006,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly/hourly/daily",
+					"name": "request booking(coworking) monthly/hourly/daily10",
 					"event": [
 						{
 							"listen": "test",
@@ -9022,7 +9022,7 @@
 									"});",
 									"",
 									"",
-									"postman.setNextRequest(\"cancel request by ID\");"
+									"postman.setNextRequest(\"cancel request by ID10\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9112,7 +9112,7 @@
 					]
 				},
 				{
-					"name": "cancel request by ID",
+					"name": "cancel request by ID10",
 					"event": [
 						{
 							"listen": "test",
@@ -9122,7 +9122,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is canceled)\");"
+									"postman.setNextRequest(\"get user requests info (check is canceled)10\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9207,7 +9207,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is canceled)",
+					"name": "get user requests info (check is canceled)10",
 					"event": [
 						{
 							"listen": "test",
@@ -9224,7 +9224,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -9297,7 +9297,7 @@
 			"name": "Create hourly/daily/monthly booking request and then cancel it after approve(tenant)",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest11",
 					"event": [
 						{
 							"listen": "test",
@@ -9311,7 +9311,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9433,7 +9433,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly/hourly/daily",
+					"name": "request booking(coworking) monthly/hourly/daily11",
 					"event": [
 						{
 							"listen": "test",
@@ -9449,7 +9449,7 @@
 									"});",
 									"",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9539,7 +9539,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host11",
 					"event": [
 						{
 							"listen": "test",
@@ -9552,7 +9552,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9661,7 +9661,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID11",
 					"event": [
 						{
 							"listen": "test",
@@ -9671,7 +9671,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9756,7 +9756,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is approved)",
+					"name": "get user requests info (check is approved)11",
 					"event": [
 						{
 							"listen": "test",
@@ -9774,9 +9774,9 @@
 									"});",
 									"",
 									"if (pm.variables.get(\"role_id\") == 2){",
-									"    postman.setNextRequest(\"authorize as guest after approve\");",
+									"    postman.setNextRequest(\"authorize as guest after approve11\");",
 									"} else {",
-									"    postman.setNextRequest(\"decline request by ID\");",
+									"    postman.setNextRequest(\"decline request by ID11\");",
 									"}",
 									"",
 									""
@@ -9847,7 +9847,7 @@
 					]
 				},
 				{
-					"name": "authorize as guest after approve",
+					"name": "authorize as guest after approve11",
 					"event": [
 						{
 							"listen": "test",
@@ -9861,7 +9861,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -9970,7 +9970,7 @@
 					]
 				},
 				{
-					"name": "decline request by ID",
+					"name": "decline request by ID11",
 					"event": [
 						{
 							"listen": "test",
@@ -9980,7 +9980,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)11\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10065,7 +10065,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)11",
 					"event": [
 						{
 							"listen": "test",
@@ -10081,7 +10081,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -10154,7 +10154,7 @@
 			"name": "Create hourly/daily/monthly booking request and then cancel it after approve(host)",
 			"item": [
 				{
-					"name": "authorize as guest",
+					"name": "authorize as guest12",
 					"event": [
 						{
 							"listen": "test",
@@ -10168,7 +10168,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily\");"
+									"postman.setNextRequest(\"request booking(coworking) monthly/hourly/daily12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10290,7 +10290,7 @@
 					]
 				},
 				{
-					"name": "request booking(coworking) monthly/hourly/daily",
+					"name": "request booking(coworking) monthly/hourly/daily12",
 					"event": [
 						{
 							"listen": "test",
@@ -10306,7 +10306,7 @@
 									"});",
 									"",
 									"",
-									"postman.setNextRequest(\"authorize as host\");"
+									"postman.setNextRequest(\"authorize as host12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10396,7 +10396,7 @@
 					]
 				},
 				{
-					"name": "authorize as host",
+					"name": "authorize as host12",
 					"event": [
 						{
 							"listen": "test",
@@ -10409,7 +10409,7 @@
 									"    pm.environment.set(\"role_id\", jsonData.role_id);",
 									"});",
 									"",
-									"postman.setNextRequest(\"approve request by ID\");"
+									"postman.setNextRequest(\"approve request by ID12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10518,7 +10518,7 @@
 					]
 				},
 				{
-					"name": "approve request by ID",
+					"name": "approve request by ID12",
 					"event": [
 						{
 							"listen": "test",
@@ -10528,7 +10528,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is approved)\");"
+									"postman.setNextRequest(\"get user requests info (check is approved)12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10613,7 +10613,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is approved)",
+					"name": "get user requests info (check is approved)12",
 					"event": [
 						{
 							"listen": "test",
@@ -10631,7 +10631,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query\");"
+									"postman.setNextRequest(\"select-all-custom-query12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10699,7 +10699,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query",
+					"name": "select-all-custom-query12",
 					"event": [
 						{
 							"listen": "test",
@@ -10719,7 +10719,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"decline request by ID\");"
+									"postman.setNextRequest(\"decline request by ID12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10811,7 +10811,7 @@
 					]
 				},
 				{
-					"name": "decline request by ID",
+					"name": "decline request by ID12",
 					"event": [
 						{
 							"listen": "test",
@@ -10821,7 +10821,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"postman.setNextRequest(\"get user requests info (check is declined)\");"
+									"postman.setNextRequest(\"get user requests info (check is declined)12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10906,7 +10906,7 @@
 					]
 				},
 				{
-					"name": "get user requests info (check is declined)",
+					"name": "get user requests info (check is declined)12",
 					"event": [
 						{
 							"listen": "test",
@@ -10925,7 +10925,7 @@
 									"    }",
 									"});",
 									"",
-									"postman.setNextRequest(\"select-all-custom-query 2\");"
+									"postman.setNextRequest(\"select-all-custom-query2 12\");"
 								],
 								"type": "text/javascript"
 							}
@@ -10993,7 +10993,7 @@
 					]
 				},
 				{
-					"name": "select-all-custom-query 2",
+					"name": "select-all-custom-query2 12",
 					"event": [
 						{
 							"listen": "test",
