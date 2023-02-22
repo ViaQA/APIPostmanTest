@@ -1,0 +1,57 @@
+{
+	"id": "0db765fb-b107-4b3a-a24c-da399659f23d",
+	"name": "New Environment",
+	"values": [
+		{
+			"key": "authToken",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "role_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "booking_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "sub_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "today_main",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "tomorrow_main",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "start_day",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "end_day",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-02-22T13:20:33.569Z",
+	"_postman_exported_using": "Postman/10.10.7-230222-0617"
+}
