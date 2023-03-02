@@ -6,6 +6,10 @@ Makefile.in
 /py-compile
 /test-driver
 /ylwrap
+/node_modules
+/package-lock.json
+/package.json
+
 
 # http://www.gnu.org/software/autoconf
 
