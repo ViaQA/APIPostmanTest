@@ -53,7 +53,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -519,7 +519,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -945,7 +945,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1172,7 +1172,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1890,7 +1890,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2117,7 +2117,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2426,7 +2426,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2746,7 +2746,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2973,7 +2973,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3496,7 +3496,7 @@
 									"    ",
 									"    for (var i = 0; i < jsonData.transaction.length; i++) {",
 									"        if(jsonData.transaction[i].booking_id && jsonData.transaction[i].booking_id == pm.variables.get(\"booking_id\")) {",
-									"                pm.expect(jsonData.transaction[i].status).to.eql(\"confirmed\");",
+									"                pm.expect(jsonData.transaction[i].status).to.eql(\"Completed\");",
 									"            }",
 									"    }",
 									"});",
@@ -4210,7 +4210,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4448,7 +4448,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5831,7 +5831,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6311,7 +6311,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6643,7 +6643,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7180,7 +7180,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7408,7 +7408,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8448,7 +8448,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8913,7 +8913,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -9340,7 +9340,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -9568,7 +9568,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -9877,7 +9877,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10197,7 +10197,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100005@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{guest_password}}\",\n  \"username\": \"{{guest_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10425,7 +10425,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"password\": \"Qwerty123@\",\n  \"username\": \"andrew.test.mail.25+100000@gmail.com\"\n}",
+							"raw": "{\n  \"password\": \"{{host_password}}\",\n  \"username\": \"{{host_login}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11190,6 +11190,135 @@
 					"header": null,
 					"cookie": [],
 					"body": null
+				}
+			]
+		},
+		{
+			"name": "ADD_new_host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(null);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"role\": 1,\n    \"firstName\": \"Test\",\n    \"lastName\": \"Postman\",\n    \"email\": \"andrew.test.mail.25+35@gmail.com\",\n    \"password\": \"Qwerty123@\",\n    \"passwordConfirm\": \"Qwerty123@\",\n    \"policy\": true,\n    \"phoneNumber\": \"113425341111153311\",\n    \"code\": \"111111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devadmin.officeexchange.com/api/v.1.0/register",
+					"protocol": "https",
+					"host": [
+						"devadmin",
+						"officeexchange",
+						"com"
+					],
+					"path": [
+						"api",
+						"v.1.0",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful operation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"Pa$5w0Rd\",\n  \"username\": \"user@na.me\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"Pa$5w0Rd\",\n  \"username\": \"user@na.me\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
 				}
 			]
 		}
