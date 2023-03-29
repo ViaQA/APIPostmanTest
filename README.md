@@ -8,7 +8,18 @@ API autotests ant postman/newman
 
 https://learning.postman.com/docs/postman-cli/postman-cli-installation/
 
-Then insatll 
+//Install newman
+
+//MacOS
+
+brew install newman
+
+//or use
+
+npm install -g newman
+
+
+//Then insatll 
 
 npm install newman-reporter-qase
 
